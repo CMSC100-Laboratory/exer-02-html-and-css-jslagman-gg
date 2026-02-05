@@ -101,6 +101,10 @@ section {
 #projects h2 {
     font-size: 1.8em;
     text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+
 }
 
 .project-item {
@@ -108,7 +112,14 @@ section {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
     margin-bottom: 30px;
+}
+
+.project-item:first-of-type {   /*  remove top border and padding for FIRST item(project)  */
+    border-top: none;
+    padding-top: 0;
 }
 
 .project-item--reverse {
@@ -124,6 +135,7 @@ section {
 .project-description h3 {
     font-size: 1.4em;
     margin-bottom: 14px;
+    padding-bottom: 6px;
 }
 
 .project-gallery {
