@@ -1,28 +1,168 @@
-.flex-container {
-    display: flex;
-    border-style: solid;
-    border-width: 5px;
-    border-color: red;
-    flex-direction: row;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 .nav_bar {
     display: flex;
-    border-style: solid;
-    border-width: 5px;
-    border-color: rgb(255, 0, 200);
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 10px 20px;
 }
 
-.flex-container2 {
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+/*  Navigation Links  -----  */
+.nav_links {
+    list-style: none;
     display: flex;
-    border-style: solid;
-    border-width: 5px;
-    border-color: rgb(0, 255, 51);
-    flex-direction: row;
+    gap: 20px;
 }
-.flex-item {
-    border-style: solid;
-    border-width: 2px;
-    border-color: red;
+
+.nav_links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
+
+
+
+/*  Featured Section  -----  */
+.featured {
+    background: #eee;
+    padding: 40px 20px;
+}
+
+.featured-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.featured-photo {
+    width: clamp(150px, 24vw, 200px);    /*  clamp for adjustment when resized  */
+    height: clamp(150px, 24vw, 200px);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+
+
+/*  Skills Section  -----  */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background: #ddd;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+.info-row {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.info-row section {
+    flex: 1;
+}
+
+.info-row #about {
+    border-left: 3px solid #ddd;
+    padding-left: 30px;
+}
+
+
+
+/*  Project Gallery  -----  */
+#projects h2 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.project-item--reverse {
+    flex-direction: row-reverse;
+}
+
+.project-description {
+    flex: 1;
+    min-width: 240px;
+    padding-inline-start: 8px;
+}
+
+.project-description h3 {
+    font-size: 1.4em;
+    margin-bottom: 14px;
+}
+
+.project-gallery {
+    display: flex;
+    flex: 1;
+    min-width: 260px;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.project-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .project-item,
+    .project-item--reverse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-row {
+        flex-direction: column;
+    }
+}
+
+
+
+/*  Footer  -----  */
+footer {
+    text-align: center;
+    background: #222;
+    color: #fff;
+    padding: 10px;
+}
+
+
+

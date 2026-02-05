@@ -2,92 +2,110 @@
 
 <html>
   <head>
-    <title>Sample Web Page</title>
+
+    <title>Johann Lagman - Portfolio</title>
     <link rel="stylesheet" type="text/css" href="flex.css" />
 
   </head>
 
+
+
   <body>
-    
-    <nav>
-    <div class="nav_bar" >
-        <div class="flex-item" style="flex: 1">
-            <a href="/html/">HTML</a> |
-        </div>
-        <div class="flex-item" style="flex: 1">
-            <a href="/css/">CSS</a>
-        </div> 
-    |   <div class="flex-item" style="flex: 1">
-            <a href="/js/">JavaScript</a> |
-        </div>
-        <div class="flex-item" style="flex: 1">
-            <a href="/python/">Python</a>
-        </div>
-    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="nav_bar"> 
+        <div class="logo">Johann's Portfolio</div> 
+        <ul class="nav_links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
     </nav>
 
-    <div class="flex-container">
-        <div class="flex-item" style="flex: 3;">
-            <h1>1</h1>
-            <p>This is a paragraph</p>
-        </div>
-        <div class="flex-item" style="flex: 3;">
-            <h1>2</h1>
-            <p>This is another paragraph</p>
-        </div>
-        <div class="flex-item" style="flex: 2;">
-            <h1>3</h1>
-            <p>This is another paragraph</p>
-            <p>This is another paragraph</p>
-        </div>
-        <div class="flex-item" style="flex: 4;">
-            <h1>4</h1>
-            <p>This is another paragraph</p>
-        </div>
-        <div class="flex-item" style="flex: 3;">
-            <h1>5</h1>
-            <p>This is another paragraph</p>
-            <p>This is another paragraph</p>
-            <p>This is another paragraph</p>
-            <p>This is another paragraph</p>
-            <p>This is another paragraph</p>
-        </div>
-        <div class="flex-item" style="flex: 1;">
-            <h1>6</h1>
-            <p>This is another paragraph</p>
-        </div>
-    </div>
-    <div class="flex-container2">
-        <div class="flex-item" style="flex: 3;">
-            <h1>1</h1>
-            <p>This is a paragraph</p>
-        </div>
-        <div class="flex-item" style="flex: 3;">
-            <h1>2</h1>
-            <p>This is another paragraph</p>
-        </div>
-        <div class="flex-item" style="flex: 2;">
-            <h1>3</h1>
-            <p>This is another paragraph</p>
-            <p>This is another paragraph</p>
-        </div>
-        <div class="flex-item" style="flex: 4;">
-            <h1>4</h1>
-            <p>This is another paragraph</p>
-        </div>
-        <div class="flex-item" style="flex: 3;">
-            <h1>5</h1>
-            <p>This is another paragraph</p>
-            <p>This is another paragraph</p>
-            <p>This is another paragraph</p>
-            <p>This is another paragraph</p>
-            <p>This is another paragraph</p>
-        </div>
-        <div class="flex-item" style="flex: 1;">
-            <h1>6</h1>
-            <p>This is another paragraph</p>
-        </div>
-    </div>
-  </body>
 
+    <!-- Featured Section (Me) -->
+    <section id="home" class="featured">
+        <div class="featured-inner">
+            <img src="images/PFP_Lagman.jpg" alt="Johann Photo" class="featured-photo">
+            <div class="intro">
+                <h1>Hi, I'm Johann Lagman!</h1>
+                <p>Aspiring Web Developer & Software Engineer  |  BS Computer Science</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="info-row">
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML, CSS, JavaScript</li>
+                <li>Responsive Web Design</li>
+                <li>Git & GitHub Workflow</li>
+                <li>System Troubleshooting & Diagnostics</li>
+                <li>Embedded Systems (Arduino/ESP32)</li>
+            </ul>
+        </section>
+
+        <!-- Autobiography -->
+        <section id="about">
+            <h2>Autobiography</h2>
+            <p> I am Johann Gabriel S. Lagman, a Computer Science student at UPLB. My passion lies in creating maintainable solutions, blending theory with practice, and building user-friendly systems. I enjoy working on embedded projects, scripting automation, and developing web applications. My goal is to become a Frontend Software Engineer who designs elegant, accessible, and efficient user experiences.</p>
+        </section> 
+    </div>
+
+
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Previous Projects</h2>
+
+        <!-- Project #1 -->
+        <div class="project-item">
+            <div class="project-gallery">
+                <img src="/images/Proj1_1.jpg" alt="Project Screenshot 1_1">
+                <img src="/images/Proj1_2.jpg" alt="Project Screenshot 1_2">
+                <img src="/images/Proj1_3.jpeg" alt="Project Screenshot 1_3">
+            </div>
+
+            <div class="project-description">
+                <h3>TVDS - Table Vacancy Detection System</h3>
+                <p>An Arduino & Django project built with the ESP8266 microcontroller. Shows real-time seat availability for customers to choose tables efficiently in restaurants.</p>
+
+                <p>Silver Award - IEYI 2024, Taiwan.</p>
+
+                <p>Technologies Used: Arduino, Django, Python, HTML, CSS, JavaScript, SQLite</p>
+            </div>
+        </div>
+
+
+        <!-- Project #2 -->
+        <div class="project-item project-item--reverse">
+            <div class="project-gallery">
+                <img src="/images/Proj2_1.jpg" alt="Project Screenshot 2_1">
+                <img src="/images/Proj2_2.jpg" alt="Project Screenshot 2_2">
+            </div>
+
+            <div class="project-description">
+                <h3>OLLIE - A Digital Deskmate</h3>
+                <p>An Arduino project built with the ESP32 microcontroller. Connects to devices via bluetooth, sends user input as keystrokes. Currently under development.</p>
+
+                <p>Technologies Used: Arduino w/PlatformIO, C++</p>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Johann Lagman | Portfolio</p>
+    </footer>
+
+
+
+
+  </body>
 </html>
